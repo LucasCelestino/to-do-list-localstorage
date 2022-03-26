@@ -17,15 +17,23 @@ export class AppComponent {
   adicionarTarefa() {
     if (this.tarefaInput != null) {
       this.tarefasArray.push({
-        id: this.tarefasArray.length + 1,
+        indice: this.tarefasArray.length,
         nome: this.tarefaInput,
       });
 
-      console.log(this.tarefasArray);
+      this.tarefasStorage.setItem('tarefas', JSON.stringify(this.tarefasArray));
+      console.log(this.tarefasStorage.getItem('tarefas'));
     } else {
-      alert('preencha o campo antes de continuars');
+      alert('preencha o campo antes de continusasaars');
     }
   }
 
-  concluirTarefa() {}
+  getTarefas() {
+    return JSON.parse(this.tarefasStorage.getItem('tarefas'));
+  }
+
+  concluirTarefa(id: any) {
+    this.tarefasArray.splice(id, 1);
+    console.log(this.tarefasArray);
+  }
 }

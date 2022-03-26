@@ -6,9 +6,10 @@
 <div>
   <h2>Tarefas Adicionadas</h2>
   <div *ngIf="tarefasArray">
-    <ul *ngFor="let tarefa of tarefasArray">
+    <ul *ngFor="let tarefa of getTarefas()">
       <li>
-        {{ tarefa.nome }}<button (click)="concluirTarefa()">Concluída</button>
+        {{ tarefa.nome
+        }}<button (click)="concluirTarefa(tarefa.id)">Concluída</button>
       </li>
     </ul>
   </div>
