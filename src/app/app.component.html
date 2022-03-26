@@ -8,8 +8,10 @@
   <div *ngIf="tarefasArray">
     <ul *ngFor="let tarefa of getTarefas()">
       <li>
-        {{ tarefa.nome
-        }}<button (click)="concluirTarefa(tarefa.id)">Concluída</button>
+        <p>{{ tarefa.nome }}</p>
+        <button class="concluir" (click)="concluirTarefa(tarefa.id)">
+          Concluída
+        </button>
       </li>
     </ul>
   </div>

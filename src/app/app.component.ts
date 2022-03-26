@@ -22,9 +22,8 @@ export class AppComponent {
       });
 
       this.tarefasStorage.setItem('tarefas', JSON.stringify(this.tarefasArray));
-      console.log(this.tarefasStorage.getItem('tarefas'));
     } else {
-      alert('preencha o campo antes de continusasaars');
+      alert('Digite uma tarefa antes de continuar.');
     }
   }
 
@@ -34,6 +33,6 @@ export class AppComponent {
 
   concluirTarefa(id: any) {
     this.tarefasArray.splice(id, 1);
-    console.log(this.tarefasArray);
+    this.tarefasStorage.setItem('tarefas', JSON.stringify(this.tarefasArray));
   }
 }

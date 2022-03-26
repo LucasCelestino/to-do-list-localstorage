@@ -1,1 +1,42 @@
-/* Add application styles & imports to this file! */
+body {
+  background-color: #517acd;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fff;
+}
+
+input {
+  border: none;
+  padding: 5px;
+}
+
+button {
+  border: none;
+  padding: 5px;
+  background-color: green;
+  color: #fff;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button,
+.concluir:hover {
+  cursor: pointer;
+}
+
+.concluir {
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none !important;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  margin-right: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
