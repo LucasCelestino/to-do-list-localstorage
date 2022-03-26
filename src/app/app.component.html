@@ -5,7 +5,11 @@
 </div>
 <div>
   <h2>Tarefas Adicionadas</h2>
-  <ul>
-    <li>Lorem Ipsum <button>Concluída</button></li>
-  </ul>
+  <div *ngIf="tarefasArray">
+    <ul *ngFor="let tarefa of tarefasArray">
+      <li>
+        {{ tarefa.nome }}<button (click)="concluirTarefa()">Concluída</button>
+      </li>
+    </ul>
+  </div>
 </div>

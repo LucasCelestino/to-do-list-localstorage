@@ -8,15 +8,24 @@ import { isEmpty } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  tarefas: String[] = [];
+  tarefasArray: any[] = [];
+
+  tarefasStorage = localStorage;
 
   tarefaInput: string;
 
   adicionarTarefa() {
     if (this.tarefaInput != null) {
-      console.log(this.tarefas);
+      this.tarefasArray.push({
+        id: this.tarefasArray.length + 1,
+        nome: this.tarefaInput,
+      });
+
+      console.log(this.tarefasArray);
     } else {
       alert('preencha o campo antes de continuars');
     }
   }
+
+  concluirTarefa() {}
 }
